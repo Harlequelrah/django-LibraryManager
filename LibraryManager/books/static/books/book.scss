@@ -1,2 +1,17 @@
-body{
-background-color: lightcyan;}
+
+.stars {
+    display: flex;          /* Utilise flexbox pour un alignement horizontal */
+    align-items: center;   /* Centre verticalement les étoiles */
+}
+
+.star {
+    font-size: 24px;       /* Taille de l'étoile */
+    color: gold;           /* Couleur de l'étoile */
+    margin-right: 4px;     /* Espacement entre les étoiles */
+    transition: transform 0.2s; /* Effet de transition pour le survol */
+}
+
+.star:hover {
+    transform: scale(1.2); /* Agrandit l'étoile au survol */
+}
+

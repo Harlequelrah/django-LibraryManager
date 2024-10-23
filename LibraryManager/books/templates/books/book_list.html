@@ -1,0 +1,10 @@
+{% extends "books/book_base.html" %}
+
+{% block content %}
+<h1>Hello Django</h1>
+<p>Mes livres sont les suivants:</p>
+{% for book in books %}
+<li>{{book.title}}</li>
+<a href="{% url 'book-detail' book.id %}">Détails</a>
+{%  endfor %}
+{% endblock %}

@@ -4,7 +4,10 @@ from .models import Book
 # Create your views here.
 def viewbooks(request):
     books=Book.objects.all()
-    return render(request,'books/viewbooks.html',{'books':books})
-def about(request):
-    return HttpResponse("<h1> Contactez nous </h1>"
-    )
+    return render(request,'books/book_list.html',{'books':books})
+
+
+def viewbook(request,book_id):
+    book=Book.objects.get(id=book_id)
+    stars = "✨" * book.stars
+    return render(request,'books/book_detail.html',{'book':book,'stars':stars})
