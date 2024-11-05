@@ -1,3 +1,17 @@
+{% extends "base.html" %}
+{% load compress %}
+{% load static %}
+
+{% extends "base.html" %}
+{% load compress %}
+{% load static %}
+
+{% block style %}
+{% compress css %}
+<link href="{% static 'books/book.scss' %}"  rel="stylesheet">
+{% endcompress %}
+{% endblock style %}
+
 {% block content %}
 <h2>Titre : {{ book.title }}</h2>
 <h2>Auteur :{{ book.author }}</h2>
