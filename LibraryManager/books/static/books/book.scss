@@ -15,3 +15,11 @@
     transform: scale(1.2); /* Agrandit l'étoile au survol */
 }
 
+.form-group {
+    margin-bottom :20px;
+    padding:15px;
+    .book--input {
+        background-color:lightgray;
+        color :black;
+    }
+}
